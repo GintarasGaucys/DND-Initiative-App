@@ -1,3 +1,4 @@
+
 from random import randint
 
 f = open("default.txt", "r")
@@ -39,3 +40,5 @@ print("Turn order:")
 
 for i in range(len(names)):
     print(names[i], rolledin[i])
+
+input()
