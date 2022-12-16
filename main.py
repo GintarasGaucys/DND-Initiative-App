@@ -13,12 +13,11 @@ for i in f:
     names.append(data[0])
     initiatives.append(int(data[1]))
 
-done = 'n'
+n = int(input("How many enemies? "))
 
-while(done == 'n'):
+for i in range(n):
     names.append(input("Enter name: "))
     initiatives.append(int(input("Enter initiative: ")))
-    done = str(input("Is that it? (y/n) "))
 
 rolledin = []
 
