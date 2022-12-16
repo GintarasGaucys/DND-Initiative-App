@@ -1,4 +1,5 @@
 
+from mimetypes import init
 from random import randint
 
 f = open("default.txt", "r")
@@ -24,15 +25,19 @@ rolledin = []
 for i in range(len(initiatives)):
     rolledin.append(randint(1, 20) + initiatives[i])
 
+print(initiatives)
+print(names)
+print(rolledin)
+
 for i in range(len(names)):
     for j in range(len(names) - i - 1):
-        if rolledin[i] < rolledin[i+1]:
-            temp1 = rolledin[i]
-            temp2 = names[i]
-            rolledin[i] = rolledin[i+1]
-            rolledin[i+1] = temp1
-            names[i] = names[i+1]
-            names[i+1] = temp2
+        if rolledin[j] < rolledin[j+1]:
+            temp1 = rolledin[j]
+            temp2 = names[j]
+            rolledin[j] = rolledin[j+1]
+            rolledin[j+1] = temp1
+            names[j] = names[j+1]
+            names[j+1] = temp2
 
 
 print("Turn order:")
